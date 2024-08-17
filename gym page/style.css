@@ -1,0 +1,78 @@
+*{
+  padding: 0;
+  margin: 0;
+ 
+}
+body{
+  font-family: "titillium web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: white; 
+}
+li{
+  padding: 20px 40px 20px 40px;
+  font-size: 20px;
+  
+  border-radius: 40px;
+}
+li:hover{
+  background-color: white;
+  color: black;
+ 
+}
+h1{
+  padding: 10px;
+}
+li,h1,ul{
+  display: inline-flex;
+ } 
+ .header{
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+ }
+ .main h2{
+  font-size: 30px;
+  font-weight: 100;
+ }
+ .main h1{
+  font-size: 40px;
+ }
+ .main h1,h2{
+  display: flex;
+  
+  justify-content: center;
+  transform: translateY(70px);
+ }
+ .btn img{
+  height: 400px;
+  transform: translateY(12%);
+ }
+ .btn button {
+  height: 40px;
+ transform: translateY(500%);
+ }
+ .btn i{
+ transform: translateY(500%);
+ height: 40px;
+ right: 50px;
+ position: relative;
+ margin-left: 20px;
+ }
+ .btn button{
+background-color: black;
+color: white;
+box-shadow: 0px 0px 20px 10px rgba(235, 182, 5, 0.2);
+border-color: goldenrod;
+width: 200px;
+outline: none;
+border-style: solid;
+border-left: none;
+border-top: none;
+border-radius: 40px;
+ }
+ .btn{
+  display: flex;
+  justify-content: center;
+ }
