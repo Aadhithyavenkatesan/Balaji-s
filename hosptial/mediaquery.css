@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    nav {
+        position: static; /* Changes the position to static on small screens */
+        padding: 10px;
+    }
+    
+    .doc1 {
+        display: none; /* Hides the entire container for the doc image */
+    }
+
+    .doc {
+        display: none; /* Hides the doc image itself */
+    }
+}
