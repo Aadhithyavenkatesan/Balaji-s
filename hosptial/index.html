@@ -6,25 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hospital management</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaquery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+
+    
 </head>
 
 <body>
     <nav id="desktop-nav">
         <div class="logo">Doctorine</div>
         <div>
+            
             <ul class="nav-links">
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#doctor-spec-container">Doctor Speciality</a></li>
-                <li class="imgi"> <img src="assets/bx-user-circle.png" alt=""></li>
-                <li><a href="#projects">Profile</a></li>
+                <div class="profile">
+                    
+                    <li></i><a href="#projects" ><i class="fa-regular fa-circle-user"></i>Profile</a></li>
+                </div>
             </ul>
+            <div class="Hamburger" id="Hamburger">
+                <i class="fas fa-bars" id="hamburgerIcon"></i>
+                <i class="fas fa-times hidden" id="closeIcon"></i></div>
         </div>
     </nav>
     <section id="Home">
-        <div class="doc1"> <img src="assets/WhatsApp Image 2024-08-22 at 1.38.44 PM.png" alt="" class="doc"></div>
+        
         <section class="nearbyhp">
 
 
@@ -81,17 +91,21 @@
                             </li>
                         </ul>
                     </div>
+                    
                 </section>
+                <div class="doc1"> 
+                    <img src="assets/doctor_girl.png" alt="Doctor-image" class="doc">
+                </div>  
 
             </div>
         </section>
     </section>
     <section id="doctor-spec-container">
-        <div class="doc-text">
+        
             <div class="doc-spec">
                 <h1>Doctor Speciality</h1>
             </div>
-        </div>
+            
         <div class="spec-logo-container">
             <div class="spec-container" id="speccontainer">
                 <div class="spec-logo">
@@ -172,9 +186,10 @@
                     <p>Cardiologist</p>
                 </div>
             </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" id="arrow" class="arrow"/>
+            <i class="fa-solid fa-caret-down arrow" id="arrow"></i>
+            <!-- <img src="./assets/arrow.png" alt="Arrow icon" id="arrow" class="arrow"/> -->
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" id="doarrow" class="arrow"/>
+        
     </section>
     <section id="Hospital-section">
         <div class="hospital-container-sec">
@@ -198,11 +213,13 @@
   
 
 
+    
+    <!-- FontAwesome CDN LINK -->
+    <script src="https://kit.fontawesome.com/a8a0719660.js" crossorigin="anonymous"></script>
+
+
+
     <script src="script.js"></script>
-
-
-
-
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const optionMenus = document.querySelectorAll(".select-menu");
 
 optionMenus.forEach((optionMenu) => {
@@ -19,6 +20,25 @@ optionMenus.forEach((optionMenu) => {
 document.getElementById('arrow').addEventListener('click', function() {
     var container = document.getElementById('speccontainer');
     container.classList.toggle('expanded');
+});
+
+//Responsive Nav-Bar
+const navLinks = document.querySelector('.nav-links');
+    
+
+const hamburgerIcon = document.getElementById('hamburgerIcon');
+const closeIcon = document.getElementById('closeIcon');
+
+const hamburger = document.querySelector('.Hamburger');
+document.getElementById('Hamburger').addEventListener('click', function() {
+    
+    navLinks.classList.toggle('active');
+    hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+    
+});
+
+
 });
 
 

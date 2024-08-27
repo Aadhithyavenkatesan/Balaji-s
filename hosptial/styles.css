@@ -1,31 +1,51 @@
 * {
     font-family: "Open Sans", sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
 }
 
 body {
+    overflow-x:hidden;
+    width: 100%;
     background-color: rgb(69, 145, 148);
+    scroll-behavior: smooth;
+    
 }
 html {
-    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 /*nav*/
 
-nav,
+.desktop-nav{
+    width: 100%;
+}
 .nav-links {
   display: flex;
+  
 }
 .imgi{
-    justify-content: none;
+    justify-content:last baseline
 }
+
+.Hamburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
 nav {
+    
     display: flex;
     justify-content: space-between;
     padding: 20px;
     align-items: center;
     background-color: rgb(132, 222, 192);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    z-index: 1000;
+    z-index: 100;
     position: sticky;
     top: 0;
     border-bottom-right-radius: 20px;
@@ -41,6 +61,8 @@ a {
     color: black;
     text-decoration: none;
     text-decoration-color: white;
+    transition: .3s ;
+    
   }
   .logo {
     font-size: 2rem;
@@ -49,8 +71,10 @@ a {
   a:hover {
     color:white;
     text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(60, 255, 0);
+    text-underline-offset: .5rem;
+    /* text-decoration-color: rgb(60, 255, 0); */
+
+    
   }
 
 .logo {
@@ -60,22 +84,32 @@ a {
 .profile {
     display: flex;
     margin-right: 20px;
-    gap: .5rem;
-}
-
-.profile a {
+    gap: .1rem;
+    cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
+    
+    /* transition: all 0.1s ease 0.1s; */
+    
 }
 
-.profile p {
-    margin-top: 5px;
-    font-weight: 600;
+.profile i{
+    padding-right: 5px;
+    size: 4px;
+    align-self: baseline;
+
 }
 
-.profile a:hover {
+
+.profile:hover {
+    color:white;
     text-decoration: underline;
+    text-underline-offset: .5rem;
+    
+    
 }
+
+
 
 .nearby {
     display: flex;
@@ -88,6 +122,7 @@ a {
     margin-bottom:100px; 
     position:static;
     background-size: 200% auto;
+    background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0 0 55px rgba(0,0,0, .2);
     background-image: url('Untitled\ design\ \(1\).png');
@@ -97,13 +132,16 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: -190px;
+    /* margin-top: -190px; */
+    margin-top: 10rem;
     position:static;
 
 }
 
 .select-st {
     display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     padding-left: 20px;
 }
 
@@ -114,6 +152,7 @@ a {
 
 .select-menu .select-btn {
     display: flex;
+    flex-direction: row;
     height: 50px;
     background: black;
     padding: 10px 20px; 
@@ -183,14 +222,28 @@ a {
     gap: 5rem;
     justify-content: start;
 }
-.doc{
-    width: 250px;
-    position: relative;
-    top: 5.2rem;
-    left: 70rem;
+.doc1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: auto;
+}
+.doc1 img{
+    
+    width: 230px;
+    height: auto;
+    position: absolute;
+    z-index: 20;
+    /* size: 10px; */
+    top: 5.9rem;
+    /* right: 2rem; */
+    
    
 
 }
+
 .select-st{
     gap: 20px;
 }
@@ -208,22 +261,32 @@ a {
    margin-left: 46px;
 }
 .doc-spec{
+    display: flex;
+    position: relative; 
+    z-index: 2;
+    cursor: default;
+    top: 100px;
+    left: 45px;
+    padding: 20px;
     text-align: center;
-    padding-top:20PX ;
-    padding-left: 20PX;
+    padding-top:100px ;
+    padding-left: 110px;
+    margin-bottom: 30px;
     align-items: center;
 }
 .doc-spec h1{
+    
     font-size:36px;
     border-radius: 20px;
-text-align: center;
-  width: 400px;  
+    text-align: center;
+    width: auto;  
+    padding-left: 10px;
  
 }
 .spec-container{
     background-color: white;
     width: 75%;
-    height: 120px;
+    height: 280px;
    
    gap: 6rem;
     display: flex;
@@ -243,17 +306,10 @@ text-align: center;
 .spec-logo-container{
     display: flex;
     justify-content: space-around;
-    margin-top: -30px;
+    margin-bottom: 15px;
+  
 }
-.doc-text {
-    display: flex;
-    position: relative; 
-    z-index: 2;
-    cursor: default;
-    top: 45px;
-    left: 45px;
-    padding: 20px;
-}
+
 
 .doc-spec-arrow {
    margin-left:95% ;
@@ -283,18 +339,24 @@ text-align: center;
 }
 .arrow{
     position: relative;
-    right: 8rem;
-    top: 12.5rem;
-    width: 30px;
-    height: 30px;
+    right: 11rem;
+    top: 14.5rem;
+    /* width: 30px;
+    height: 30px; */
+    font-size: 30px;
+    font-weight: 600;
 }
 .expanded {
     height: auto; 
     transition:0.3s ease, transform 0.3s ease;
 }
-
+.spec-long-container i{
+    
+    
+    
+}
 .spec-container.expanded ~ .arrow {
-top:48rem;
+    top:-3rem;
     transform: translateX(-50%) rotate(180deg);
     transition: 0.3s ease, transform 0.3s ease;
 }

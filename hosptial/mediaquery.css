@@ -1,14 +1,77 @@
 @media (max-width: 768px) {
-    nav {
-        position: static; /* Changes the position to static on small screens */
+    
+    .Hamburger{
+        display: flex;
+    }
+    .imgi{
+       display: none;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        width: 200px;
+        border-radius: 5px;
+       height: max-content;
         padding: 10px;
     }
+    .nav-links.active{
+        display: flex;
+    }
+    .Hamburger .hidden {
+        display: none;
+    }
     
-    .doc1 {
+    .nearby .doc1 {
         display: none; /* Hides the entire container for the doc image */
     }
 
     .doc {
         display: none; /* Hides the doc image itself */
+    }
+
+    .nearby{
+        height: auto;
+        background-size: cover;
+    }
+
+  
+
+    .nearby h1{
+        padding-top: 50px;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 1.25;
+    }
+
+    #doctor-spec-container{
+        margin-top: -10rem;
+        margin-left: -32px;
+    }
+
+    .doc-spec{
+        top: 105px;
+        
+        left: -35px;
+    }
+
+    .doc-spec h1{
+        font-size: 30px;
+        padding-left: -200px;
+    }
+    .spec-container{
+        margin-top: 5px;
+        padding: -70px;
+    }
+    .spec-logo{
+        margin-right: 25px; 
+    }
+
+    .spec-container .arrow {
+        margin-top: 10px;
+        top: 10rem;
     }
 }
